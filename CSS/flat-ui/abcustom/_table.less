@@ -110,6 +110,48 @@ th {
 	}
 }
 
+.tbl-meta {
+	padding: 0;
+
+	h4, p {
+		@media only screen and (max-width : @screen-xs-max) {
+			padding-left: 0;
+		}
+	}
+	h4 {
+		font-size: 1.33333em;
+		line-height: 1.66666em;
+		margin: 0;
+	}
+	p {
+		margin: 0;
+		font-size: 0.93333em;
+		line-height: 1.45em;
+		font-weight: 500;
+		@media only screen and (max-width : @screen-xs-max) {
+			margin-top: 6px;
+		}
+	}
+	@media only screen and (max-width : @screen-st-min) {
+			width: 100%;
+			float: none;
+		}
+	.checkbox {
+		float: left;
+		margin: 2px 30px 0 0;
+		position: relative;
+		width: 24px;
+		height: 24px;
+		padding: 0;
+		@media only screen and (max-width : @screen-xs-max) {
+			display: none !important;
+		}
+		@media only screen and (max-width : @screen-sm-max) {
+			margin-right: 18px;
+		}
+	}
+}
+
 .data {
 	text-align: left;
 	padding-left: 18px;

@@ -5141,8 +5141,8 @@ a.list-group-item.active > .badge,
   position: relative;
   text-align: left;
   width: 80px;
-  -webkit-mask: url("switch/mask.png") 0 0 no-repeat;
-  mask: url("switch/mask.png") 0 0 no-repeat;
+  -webkit-mask: url("../images/switch/mask.png") 0 0 no-repeat;
+  mask: url("../images/switch/mask.png") 0 0 no-repeat;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -5233,8 +5233,8 @@ a.list-group-item.active > .badge,
 }
 .switch-square {
   border-radius: 6px;
-  -webkit-mask: url("switch/mask.png") 0 0 no-repeat;
-  mask: url("switch/mask.png") 0 0 no-repeat;
+  -webkit-mask: url("../images/switch/mask.png") 0 0 no-repeat;
+  mask: url("../images/switch/mask.png") 0 0 no-repeat;
 }
 .switch-square > div.switch-off label {
   border-color: #91acbd;
@@ -6645,8 +6645,8 @@ select:active {
   position: relative;
   text-align: left;
   width: 80px;
-  -webkit-mask: url("switch/mask.png") 0 0 no-repeat;
-  mask: url("switch/mask.png") 0 0 no-repeat;
+  -webkit-mask: url("../images/switch/mask.png") 0 0 no-repeat;
+  mask: url("../images/switch/mask.png") 0 0 no-repeat;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6737,8 +6737,8 @@ select:active {
 }
 .switch-square {
   border-radius: 6px;
-  -webkit-mask: url("switch/mask.png") 0 0 no-repeat;
-  mask: url("switch/mask.png") 0 0 no-repeat;
+  -webkit-mask: url("../images/switch/mask.png") 0 0 no-repeat;
+  mask: url("../images/switch/mask.png") 0 0 no-repeat;
 }
 .switch-square > div.switch-off label {
   border-color: #91acbd;
@@ -6803,6 +6803,21 @@ select:active {
   top: 0;
   left: 0;
   cursor: inherit;
+}
+.typeahead.dropdown-menu {
+  max-width: 550px;
+  min-width: 50px;
+  width: 100% !important;
+}
+.typeahead.dropdown-menu li.active > a,
+.typeahead.dropdown-menu li.selected > a,
+.typeahead.dropdown-menu li.active > a.highlighted,
+.typeahead.dropdown-menu li.selected > a.highlighted {
+  background: #737373;
+  color: #ffffff;
+}
+.typeahead.dropdown-menu li > a {
+  font-size: 24px;
 }
 .table-container {
   background-color: #FFF;
@@ -6919,6 +6934,55 @@ th {
 }
 @media only screen and (max-width: 1024px) {
   .meta .checkbox {
+    margin-right: 18px;
+  }
+}
+.tbl-meta {
+  padding: 0;
+}
+@media only screen and (max-width: 640px) {
+  .tbl-meta h4,
+  .tbl-meta p {
+    padding-left: 0;
+  }
+}
+.tbl-meta h4 {
+  font-size: 1.33333em;
+  line-height: 1.66666em;
+  margin: 0;
+}
+.tbl-meta p {
+  margin: 0;
+  font-size: 0.93333em;
+  line-height: 1.45em;
+  font-weight: 500;
+}
+@media only screen and (max-width: 640px) {
+  .tbl-meta p {
+    margin-top: 6px;
+  }
+}
+@media only screen and (max-width: 961px) {
+  .tbl-meta {
+    width: 100%;
+    float: none;
+  }
+}
+.tbl-meta .checkbox {
+  float: left;
+  margin: 2px 30px 0 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+@media only screen and (max-width: 640px) {
+  .tbl-meta .checkbox {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .tbl-meta .checkbox {
     margin-right: 18px;
   }
 }
@@ -7995,6 +8059,25 @@ button:focus {
   outline: 1px dotted #aaa;
   outline-offset: -5px;
 }
+.btn-square {
+  width: 75px;
+  height: 60px;
+  line-height: 58px;
+  font-weight: 500;
+  font-size: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 640px) {
+  .btn-square {
+    width: 125px;
+    height: 100px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    line-height: 100px;
+    font-size: 24px;
+  }
+}
 body {
   background: #4c4d4f;
   height: inherit;
@@ -8950,8 +9033,8 @@ h2 {
   font-size: 2.8em;
 }
 .header .record-title .record-name p {
-  font-weight: 700;
-  line-height: 13px;
+  font-weight: 500;
+  line-height: 20px;
   color: #959595;
 }
 @media only screen and (max-width: 640px) {
@@ -9044,10 +9127,17 @@ h2 {
   margin-bottom: 6px;
   line-height: 30px;
 }
-.info-section .block-label {
+.block-label {
   vertical-align: top;
   display: inline-block;
   margin-right: 4px;
+}
+.info-stack p,
+.info-stack h1,
+.info-stack h2,
+.info-stack h3,
+.info-stack h4 {
+  margin: 0;
 }
 .info-section p {
   margin-bottom: .25em;
@@ -9313,6 +9403,29 @@ h2 {
   }
   .activity-content.relative {
     padding-left: 30px;
+  }
+}
+.contact-holder {
+  margin-top: 8px;
+  height: 80px;
+  width: 86px;
+  font-weight: 300;
+  background-color: #754a7e;
+  color: white;
+  border-radius: 5px;
+  font-size: 36px;
+  display: inline-block;
+  text-align: center;
+  line-height: 80px;
+  padding: 0 0 0 1px;
+}
+@media only screen and (max-width: 640px) {
+  .contact-holder {
+    height: 60px;
+    width: 65px;
+    font-size: 26px;
+    line-height: 60px;
+    border-radius: 3px;
   }
 }
 .onboarding-wrapper {
