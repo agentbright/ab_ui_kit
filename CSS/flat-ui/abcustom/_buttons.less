@@ -1,0 +1,225 @@
+.b0 {
+	color: #FFF;
+	background-color: #737373;
+}
+
+.btn-default {
+  .button-variant(@btn-default-color, @btn-default-bg, @btn-hover-bg, @btn-active-bg);
+}
+.btn-primary {
+  .button-variant(@ab-primary, @ab-default, @btn-primary-hover-bg, @btn-primary-active-bg);
+}
+.btn-info    {
+  .button-variant(@btn-default-color, @brand-info, @btn-info-hover-bg, @btn-info-active-bg);
+}
+.btn-danger  {
+  .button-variant(@btn-default-color, @brand-danger, @btn-danger-hover-bg, @btn-danger-active-bg);
+}
+.btn-success {
+  .button-variant(@btn-default-color, @brand-success, @btn-success-hover-bg, @btn-success-active-bg);
+}
+.btn-warning {
+  .button-variant(@btn-default-color, @brand-warning, @btn-warning-hover-bg, @btn-warning-active-bg);
+}
+.btn-inverse {
+  .button-variant(@btn-default-color, @brand-primary, @btn-inverse-hover-bg, @btn-inverse-active-bg);    
+}
+.btn-embossed {
+  .box-shadow(inset 0 -2px 0 fade(black, 15%));
+  
+  &.active,
+  &:active {
+    .box-shadow(inset 0 2px 0 fade(black, 15%));
+  }
+}
+.btn-wide {
+  min-width: 140px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+// Button sizes
+// --------------------------------------------------
+
+.btn-hg {
+  .button-size(13px, 20px, @btn-font-size-hg, @btn-line-height-hg, @border-radius-large);
+}
+.btn-lg {
+  .button-size(10px, 19px, @btn-font-size-lg, @btn-line-height-lg, @border-radius-large);
+}
+.btn-sm {
+  .button-size(9px, 13px, @btn-font-size-sm, @btn-line-height-sm, @border-radius-base);
+}
+.btn-xs {
+  .button-size(6px, 9px, @btn-font-size-xs, @btn-line-height-xs, @border-radius-small);
+}
+
+
+.btn {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-font-smoothing: subpixel-antialiased;
+	line-height: 36px;
+	padding: 0 18px;
+	.transition(0);
+	.abicon {
+		font-size: 20px;
+	}
+}
+
+.btn-hg {
+  padding: 15px 23px;
+  font-size: 22px;
+  line-height: 1.327;
+}
+
+.btn-lg {
+  padding: 10px 19px;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.btn-st {
+  
+}
+
+.btn-sm {
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 1.385;
+}
+
+.btn-xs {
+  padding: 6px 9px;
+  font-size: 12px;
+  line-height: 1.083;
+}
+
+
+.bfui {
+	padding: 10px 15px;
+}
+
+.input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn {
+	height: 36px;
+}
+
+.btn-var42 {
+	height: 42px;
+}
+
+.b0 {
+	color: #FFF;
+	background-color: #737373;
+}
+
+.add-btn {
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-default {
+  .button-variant(@btn-default-color, @btn-default-bg, @btn-hover-bg, @btn-active-bg);
+}
+.btn-primary {
+  .button-variant(@ab-primary, @ab-default, @btn-primary-hover-bg, @btn-primary-active-bg);
+}
+.btn-info    {
+  .button-variant(@btn-default-color, @brand-info, @btn-info-hover-bg, @btn-info-active-bg);
+}
+.btn-danger  {
+  .button-variant(@btn-default-color, @brand-danger, @btn-danger-hover-bg, @btn-danger-active-bg);
+}
+.btn-success {
+  .button-variant(@btn-default-color, @brand-success, @btn-success-hover-bg, @btn-success-active-bg);
+}
+.btn-warning {
+  .button-variant(@btn-default-color, @brand-warning, @btn-warning-hover-bg, @btn-warning-active-bg);
+}
+.btn-inverse {
+  .button-variant(@btn-default-color, @brand-primary, @btn-inverse-hover-bg, @btn-inverse-active-bg);    
+}
+.btn-embossed {
+  .box-shadow(inset 0 -2px 0 fade(black, 15%));
+  
+  &.active,
+  &:active {
+    .box-shadow(inset 0 2px 0 fade(black, 15%));
+  }
+}
+.btn-wide {
+  min-width: 140px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.select .btn .filter-option {
+  top: inherit;
+}
+
+
+.btn-lg > [class^="fui-"] {
+  line-height: 36px;
+}
+
+.btn-form {
+  margin-top: 20px;
+}
+
+.btn-group .btn {
+  font-weight: 700;
+  .caret {
+    border-top-color: #737373;
+  }
+}
+
+// INPUT GROUP
+// ---------------------------------------
+
+.form-group.focus,
+.navbar-form.focus {
+  .input-group-addon {
+    background-color: @second-color;
+    border-color: @second-color;
+  }
+  .input-group-btn {
+    > .btn-default + .btn-default {
+      border-left-color: mix(@second-color, black, 85%);
+    }
+    .btn {
+      border-color: @second-color;
+      background-color: @inverse;
+      color: @second-color;
+    }
+    .btn-default {
+      .button-variant(@btn-default-color, @second-color, @btn-primary-hover-bg, @btn-primary-active-bg);
+    }
+  }
+  .input-group-btn:first-child {
+    .btn {
+      color: @second-color;
+      border-color: @second-color;
+    }
+  }
+}
+
+.btn-block {
+  @media only screen and (max-width: @screen-xs-max) {
+    margin: 24px 0 0;
+    width: 100%;
+    display: block;
+    height: 48px;
+    line-height: 48px;
+  }
+}
+
+.fwm-btn {
+  @media only screen and (max-width: @screen-xs-max) {
+    width: 100%;
+  }
+}
+
+.btn, button {
+  &:focus {
+    outline: 1px dotted #aaa;
+    outline-offset: -5px;
+  }
+}

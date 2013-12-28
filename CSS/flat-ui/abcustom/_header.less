@@ -1,0 +1,59 @@
+.header {
+	margin-top: 1.875em;
+	margin-bottom: 2.5625em;
+	position: relative;
+	z-index: 5;
+
+	@media only screen and (max-width: @screen-xs-max) {
+		margin-bottom: 1.0625em;
+	}
+
+	h1 {
+		font-size: 2.8em;
+	}
+
+	h1, h2 {
+		vertical-align: bottom;
+		line-height: 1.2em;
+		letter-spacing: -0.03em;
+		margin-bottom: 6px;
+
+		@media only screen and (max-width: @screen-xs-max) {
+			font-size: 1.625em;
+			line-height: 1.385em;
+			margin-bottom: 1px;
+		}
+		a {
+			line-height: inherit;
+		}
+	}
+
+	.b0 {
+		@media only screen and (max-width: @screen-xs-max) {
+			height: 48px;
+			line-height: 48px;
+		}
+	}
+
+	.add-btn {
+		float: right;
+		display: inline-block;
+		margin: 3px 0 0 15px;
+		-webkit-font-smoothing: antialiased;
+
+		@media only screen and (max-width: @screen-xs-max) {
+			margin: 24px 0 0;
+			width: 100%;
+			display: block;
+		}
+	}
+	h1+h2 {
+		margin-top: 0;
+		font-size: 2.8em;
+		@media only screen and (max-width: @screen-xs-max) {
+			font-size: 1.625em;
+			line-height: 1.3846153846153846em;
+			margin-bottom: 7px;
+		}
+	}
+}
