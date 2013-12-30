@@ -9428,6 +9428,24 @@ h2 {
     border-radius: 3px;
   }
 }
+.indicator-lg {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  font-size: 28px;
+  opacity: .6;
+}
+.indicator-good {
+  color: white;
+  background-color: #2ecc71;
+}
+.indicator-bad {
+  color: white;
+  background-color: #e74c3c;
+}
 .onboarding-wrapper {
   max-width: 530px;
   padding-top: 60px;
