@@ -69,19 +69,6 @@ textarea:hover, input[type="text"]:hover, input[type="password"]:hover, input[ty
   border-top-right-radius: 0;
 }
 
-.field-help, .invalid-error {
-  white-space: normal;
-  width: 100%;
-  max-width: 550px;
-  word-wrap: break-word;
-  font-size: .8125em;
-  line-height: 1.3846153846153846em;
-  font-weight: 700;
-  position: relative;
-  color: #737373;
-  letter-spacing: .01em;
-}
-
 .form-group input.field-help, .form-group input[type="text"]~.field-help, .form-group input[type="number"]~.field-help, .form-group input[type="email"]~.field-help, .form-group input[type="url"]~.field-help, .form-group input[type="tel"]~.field-help, .form-group input[type="password"]~.field-help, .form-group textarea~.field-help, .form-group .dijitSelect~.field-help {
   -webkit-transition: all .25s ease-in-out 0;
      -moz-transition: all .25s ease-in-out 0;
@@ -146,7 +133,7 @@ textarea:hover, input[type="text"]:hover, input[type="password"]:hover, input[ty
   opacity: 0;
   overflow: hidden;
   &.active {
-    max-height: 150em;
+    max-height: 800em;
     visibility: visible;
     opacity: 1;
   }
@@ -220,6 +207,10 @@ textarea {
   padding: .4em;
 }
 
+textarea.error-danger, input[type="text"].error-danger, input[type="password"].error-danger, input[type="file"].error-danger, input[type="datetime"].error-danger, input[type="datetime-local"].error-danger, input[type="date"].error-danger, input[type="month"].error-danger, input[type="time"].error-danger, input[type="week"].error-danger, input[type="number"].error-danger, input[type="email"].error-danger, input[type="url"].error-danger, input[type="search"].error-danger, input[type="tel"].error-danger, input[type="color"].error-danger, .uneditable-input.error-danger, .faux-file.error-danger {
+  border: 2px solid @brand-danger;
+}
+
 .field-wrapper input[type="text"], .field-wrapper input[type="number"], .field-wrapper input[type="email"], .field-wrapper input[type="url"], .field-wrapper input[type="tel"], .field-wrapper input[type="password"], .field-wrapper textarea {
   width: 100%;
   max-width: 550px;
@@ -280,10 +271,11 @@ select {
   font-size: 15px;
   font-weight: 700;
   letter-spacing: .01em;
+    margin-bottom: 24px;
   color: #737373;
   background-color: #e0e0e0;
   border-collapse: separate;
-  background-image: url(https://us4.admin.mailchimp.com/release/8.8.61/images/select-arrows-1x.png);
+  background-image: url("/select-arrows.png");
   background-repeat: no-repeat;
   background-position: right center;
   cursor: pointer;
@@ -302,8 +294,17 @@ select {
   top: inherit;
 }
 
+select.select {
+  margin-bottom: 24px;
+}
+
 .select .btn .filter-option {
   top: 0;
+}
+
+.select {
+  display: inherit;
+  margin-bottom: 5px;
 }
 
 .small-meta {
@@ -696,4 +697,82 @@ select {
 
 .typeahead.dropdown-menu li > a {
   font-size: 24px;
+}
+
+.tt-dropdown-menu .tt-suggestions {
+  max-width: 550px;
+  min-width: 50px;
+  width: 100% !important;
+}
+
+.tt-suggestion, .tt-dropdown-menu li.selected > a, .tt-is-under-cursor > a.highlighted, .tt-dropdown-menu a.highlighted, .tt-is-under-cursor {
+  background: #99999;
+  color: #ffffff;
+}
+
+.tt-is-under-cursor{
+  background: #737373;
+}
+
+.tt-suggestion a {
+  font-size: 24px;
+}
+
+.twitter-typeahead{
+  width: 100%;
+}
+
+.tt-dropdown-menu {
+  top: 60px!important;
+  left: 0px;
+  display: none;
+  opacity: 1;
+  visibility: visible;
+  width: 50%;
+  margin-top: 0px;
+  border: 2px solid @second-color!important;
+  padding: 5px 0;
+  background-color: @inverse;
+  border-radius: @border-radius-large;
+
+  .tt-suggestion {
+    a {
+      padding: 6px 14px;
+    }
+    &:first-child,
+    &:last-child {
+      a {
+        padding: 6px 14px;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.twitter-typeahead .tt-hint{
+  display: none!important;
+}
+
+.field-help, .has-error {
+  white-space: normal;
+  width: 100%;
+  max-width: 550px;
+  word-wrap: break-word;
+  font-size: .8125em;
+  line-height: 1.3846153846153846em;
+  font-weight: 700;
+  position: relative;
+  color: #737373;
+  letter-spacing: .01em;
+}
+
+.has-error {
+  display: block;
+  color: @brand-danger;
+  max-height: 200px;
+}
+
+.field-wrapper .has-error {
+  top: -1.1538461538461537em;
+  max-height: 200px;
 }
